@@ -37,7 +37,7 @@ class _BaseScreenState extends State<BaseScreen> {
       body: _items[_currentIndex].values.first.child,
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
-        backgroundColor: AppPallete.backgroundColor,
+        fixedColor: AppPallete.backgroundColor,
         onTap: onTabTapped,
         currentIndex: _currentIndex,
         items: _items.map(
