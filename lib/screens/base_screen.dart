@@ -1,3 +1,4 @@
+import 'package:crypto_gem/theme/app_pallete.dart';
 import 'package:flutter/material.dart';
 
 import 'package:crypto_gem/screens/coins_screnn/coins_screnn.dart';
@@ -36,6 +37,7 @@ class _BaseScreenState extends State<BaseScreen> {
       body: _items[_currentIndex].values.first.child,
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
+        backgroundColor: AppPallete.backgroundColor,
         onTap: onTabTapped,
         currentIndex: _currentIndex,
         items: _items.map(

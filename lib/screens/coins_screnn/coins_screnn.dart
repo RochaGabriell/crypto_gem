@@ -151,11 +151,15 @@ class _CoinsScrennState extends State<CoinsScrenn> {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  Text(
-                                    crypto.name,
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      color: AppPallete.disabledColor,
+                                  SizedBox(
+                                    width: 100,
+                                    child: Text(
+                                      crypto.name,
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        color: AppPallete.disabledColor,
+                                      ),
+                                      maxLines: 2,
                                     ),
                                   ),
                                 ],
@@ -205,13 +209,11 @@ class _CoinsScrennState extends State<CoinsScrenn> {
                                   title: 'Moedas Circulantes: ',
                                   value:
                                       'R\$ ${crypto.circulatingSupply.toStringAsFixed(2)}',
-                                  isRow: true,
                                 ),
                                 const SizedBox(height: 10),
                                 LabelFormated(
                                   title: 'Fornecimento Máx: ',
                                   value: 'R\$ ${crypto.maxSupply}',
-                                  isRow: true,
                                 ),
                                 const SizedBox(height: 10),
                                 LabelFormated(
