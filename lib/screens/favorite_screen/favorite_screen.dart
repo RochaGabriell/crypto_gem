@@ -33,19 +33,23 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
     await _coinsStore.getCoins(page: page);
   }
 
+  void _selectCoin(CoinModel coin) {
+    _coinsStore.setCoinSelected(coin);
+  }
+
   @override
   Widget build(BuildContext context) {
-    CoinModel? coin = _coinsStore.favoritesList.isNotEmpty
-        ? _coinsStore.favoritesList.first
-        : null;
+    CoinModel? coin = _coinsStore.coinSelected;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Minhas Moedas')),
+      appBar: AppBar(
+        title: const Text('Minhas Moedas'),
+        surfaceTintColor: AppPallete.backgroundColor,
+        scrolledUnderElevation: 0.0,
+      ),
       body: Container(
         color: AppPallete.backgroundColor,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               width: 312,
@@ -118,30 +122,27 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
-            SizedBox(
-              height: 400,
+            Expanded(
               child: Consumer<CoinsStore>(
                 builder: (_, store, __) {
                   if (store.loading == true) {
                     return const Center(child: LinearProgressIndicator());
                   }
-      
+
                   if (store.errorMessage.isNotEmpty) {
                     return Center(child: Text(store.errorMessage));
                   }
-      
+
                   if (store.coins == null) {
                     return const Center(
                       child: Text('Nenhuma criptomoeda encontrada'),
                     );
                   }
-      
+
                   final crypto = store.favoritesList;
-      
+
                   return ListView.builder(
                     itemCount: crypto.length,
-                    shrinkWrap: true,
                     itemBuilder: (_, index) {
                       final coin = crypto[index];
                       return Container(
@@ -151,8 +152,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                         child: ListTile(
                           leading: Container(
                             decoration: BoxDecoration(
-                              color:
-                                  AppPallete.selectedColor.withOpacity(0.3),
+                              color: AppPallete.selectedColor.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(10),
                             ),
                             padding: const EdgeInsets.all(8),
@@ -164,8 +164,10 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          subtitle: Text(coin.athChangePercentage.toString()),
+                          subtitle: Text(
+                              '${coin.athChangePercentage.toStringAsFixed(2)}%'),
                           trailing: _favoriteIcon(store, coin),
+                          onTap: () => setState(() => _selectCoin(coin)),
                         ),
                       );
                     },

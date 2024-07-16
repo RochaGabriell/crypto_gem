@@ -37,12 +37,12 @@ class _BaseScreenState extends State<BaseScreen> {
       body: _items[_currentIndex].values.first.child,
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
-        fixedColor: AppPallete.backgroundColor,
         onTap: onTabTapped,
         currentIndex: _currentIndex,
         items: _items.map(
           (item) {
             return BottomNavigationBarItem(
+              backgroundColor: AppPallete.backgroundColor,
               icon: Icon(item.values.first.icon),
               label: item.values.first.title,
             );

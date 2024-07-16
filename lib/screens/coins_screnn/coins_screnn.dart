@@ -53,6 +53,8 @@ class _CoinsScrennState extends State<CoinsScrenn> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Criptomoedas'),
+        surfaceTintColor: AppPallete.backgroundColor,
+        scrolledUnderElevation: 0.0,
         actions: [_paginator()],
       ),
       body: Column(
