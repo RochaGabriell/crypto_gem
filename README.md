@@ -1,7 +1,7 @@
 # Chamber of Deputies
 
-<img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/favorite_screen.jpg" width="50%">
-<img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/coins_screnn.jpg" width="50%">
+<img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/favorite_screen.jpg" width="40%">
+<img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/coins_screnn.jpg" width="40%">
 
 ## Atividade para Turma de Programação para Dispositivos Móveis - Ensino Superior
 
