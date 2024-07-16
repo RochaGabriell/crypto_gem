@@ -1,4 +1,4 @@
-# Chamber of Deputies
+# CryptoGem
 
 <div style="display: flex;">
   <img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/favorite_screen.jpg" width="35%" style="margin-right: 10px;">
