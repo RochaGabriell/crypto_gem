@@ -1,7 +1,9 @@
 # Chamber of Deputies
 
-<img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/favorite_screen.jpg" width="25%">
-<img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/coins_screnn.jpg" width="25%">
+<div style="display: flex;">
+  <img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/favorite_screen.jpg" width="35%" style="margin-right: 10px;">
+  <img src="https://github.com/RochaGabriell/crypto_gem/raw/main/.github/coins_screnn.jpg" width="35%">
+</div>
 
 ## Atividade para Turma de Programação para Dispositivos Móveis - Ensino Superior
 
@@ -27,30 +29,30 @@ Desenvolver um aplicativo Flutter utilizando a biblioteca provider para gerencia
 ## Instalação e Execução
 
 1. Clone o repositório do GitHub:
-    ```
-    git clone https://github.com/RochaGabriell/crypto_gem.git
-    ```
+   ```
+   git clone https://github.com/RochaGabriell/crypto_gem.git
+   ```
 2. Navegue até o diretório do projeto:
-    ```
-    cd crypto_gem
-    ```
+   ```
+   cd crypto_gem
+   ```
 3. Instale as dependências:
-    ```
-    flutter pub get
-    ```
+   ```
+   flutter pub get
+   ```
 4. Execute o aplicativo:
-    ```
-    flutter run
-    ```
+   ```
+   flutter run
+   ```
 
 ## Construção
+
 Para construir o aplicativo, use o seguinte comando:
 
 ```
 flutter build apk --release
 ```
 
-
 Certifique-se de ter o Flutter instalado e configurado corretamente em seu ambiente de desenvolvimento antes de seguir as etapas acima.
 
---- 
+---
